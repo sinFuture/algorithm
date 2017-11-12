@@ -15,8 +15,14 @@
     console.log(stopstamp-startstamp+'ms');
 */
 
-console.log("插入排序算法：");
+// console.log("插入排序算法：");
+// var startstamp = Date.parse(new Date());
+// console.log(insertionSort_2(random(26,30000,10000)));
+// var stopstamp = Date.parse(new Date());
+// console.log(stopstamp-startstamp+'ms');
+
+console.log("快速排序算法：");
 var startstamp = Date.parse(new Date());
-console.log(insertionSort_2(random(26,30000,10000)));
+console.log(quickSort(sameNumber(26,30000000,4000000)));
 var stopstamp = Date.parse(new Date());
 console.log(stopstamp-startstamp+'ms');
