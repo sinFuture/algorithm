@@ -13,3 +13,4 @@ var bubbleSort_1 = (arr) =>{
     }
     return arr;
 }
+export default bubbleSort_1;
