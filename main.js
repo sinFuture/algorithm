@@ -4,10 +4,3 @@ var startstamp = Date.parse(new Date());
 console.log(bubbleSort_1(random(26,30000,10000)));
 var stopstamp = Date.parse(new Date());
 console.log(stopstamp-startstamp+'ms');
-
-
-console.log("第二种算法：");
-var startstamp = Date.parse(new Date());
-console.log(bubbleSort_2(random(26,30000,10000)));
-var stopstamp = Date.parse(new Date());
-console.log(stopstamp-startstamp+'ms');

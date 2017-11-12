@@ -1,23 +1,8 @@
 /**
- * 第一种冒泡排序算法
+ * 冒泡排序算法
  * @param {*} arr 
  */
 var bubbleSort_1 = (arr) =>{
-    let len =arr.length;
-    for(let i=0;i<len;i++){
-        for(let j=0;j<len-1-i;j++){
-            if(arr[j]>arr[j+1]){
-                [arr[j],arr[j+1]] = [arr[j+1],arr[j]];
-            }
-        }
-    }
-    return arr;
-}
-/**
- * 第二种冒泡排序
- * @param {*} arr 
- */
-var bubbleSort_2 = (arr) =>{
     let len =arr.length;
     for(let i=0;i<len;i++){
         for(let j=0;j<len-1-i;j++){
