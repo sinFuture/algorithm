@@ -15,20 +15,21 @@ var insertSort = (arr,l,r)=>{
 };
 var _mergeSort = (arr,l,r)=>{
     if(l>=r){
-        return;
+        return 0;
     }
     // if(r-l<=15){
     //     insertSort(arr,l,r);
     //     return;
     // }
+    let count=0;
     let mid = Math.floor((r+l)/2);
-    _mergeSort(arr,l,mid);
-    _mergeSort(arr,mid+1,r);
+    count += _mergeSort(arr,l,mid);
+    count += _mergeSort(arr,mid+1,r);
     //优化一，对于有序数列特别有作用，但是对于有些情况这个if判断会有的影响
     if(arr[mid]>arr[mid+1]){
-        _merge(arr,l,mid,r);
+        count += _merge(arr,l,mid,r);
     }
-    return arr;
+    return count;
 }
 var _merge = (arr,l,mid,r)=>{
     let _arr=[];
@@ -36,6 +37,7 @@ var _merge = (arr,l,mid,r)=>{
         _arr.push(arr[i]);
     }
     let i=l,j = mid+1;
+    let count = 0;
     for(let k=l;k<=r;k++){
         if(i>mid){
             arr[k] = _arr[j-l];
@@ -48,6 +50,7 @@ var _merge = (arr,l,mid,r)=>{
             i++;
         }else{
             arr[k] = _arr[j-l];
+            count=count+(mid-i+1);
             j++;
         }
     }

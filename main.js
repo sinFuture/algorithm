@@ -23,6 +23,9 @@
 
 console.log("快速排序算法：");
 var startstamp = Date.parse(new Date());
-console.log(quickSort(sameNumber(26,30000000,4000000)));
+var arr=invertNumber(26,30000000,10);
+console.log(arr);
+console.log(quickSort(arr,4));
+// console.log(mergeSort([3,4,2,1]));
 var stopstamp = Date.parse(new Date());
 console.log(stopstamp-startstamp+'ms');

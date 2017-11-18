@@ -14,3 +14,11 @@ let sameNumber = (min,max,n)=>{
     }
     return arr;
 }
+
+let invertNumber = (min,max,n)=>{
+    let arr=[];
+    for(let i = max;arr.length<n && i>=min;i--){
+        arr.push(i);
+    }
+    return arr;
+}
