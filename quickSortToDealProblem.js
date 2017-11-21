@@ -15,7 +15,7 @@ let insertSort = (arr,l,r)=>{
     }
     return;
 };
-//求数组中第k小的元素
+//求数组中第k+1小的元素
 let _quickSort = (arr,l,r,k)=>{
     if(l==r){
         return arr[l];
